@@ -1,0 +1,48 @@
+% VERY IMPORTANT READ THIS (will be moved to README.md in the future):
+% The load order for the different dependencies is very important.
+% Some headers depend on others, so make sure to load them in the correct order:
+
+% base_header.tex
+% theme_choice_*.tex
+% theme.tex
+% ^ these ones should only be loaded in your *_main.tex file, and in this order. 
+% these 3 gave to be loaded all the time in your main.tex file before any other header, and in this order. The following headers can be loaded in almost any order after that, the recommended one being the following
+% v these ones should only be loaded in your *_content.tex file, and in this order.
+
+
+% math/base.tex
+% math/advanced.tex
+
+% environments/base.tex
+
+% NOTE: the environments/template.tex is to be used as a template for creating new environments, you should copy its contents into a local header file and modify it to create your own custom environments. Loading it directly will not cause any issues, but you might not get the desired results if you try to use the template environments without modifying them first.
+
+% tikz.tex
+
+% algorithms/base.tex
+% algorithms/advanced.tex
+
+% language/**your_language**.tex
+
+% themes/more_colours.tex
+
+\input{../assets/math/base.tex}
+\input{../assets/environments/base.tex}
+\input{../assets/tikz.tex}
+\input{../assets/themes/more_colours.tex}
+
+
+\title{\color{astral} \sffamily \bfseries Template}
+\author{Ivan Lejeune}
+\date{\today}
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+
+    \newpage
+    \input{./example_1.tex}
+    
+
+\end{document}
+
