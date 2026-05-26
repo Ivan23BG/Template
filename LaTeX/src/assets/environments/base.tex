@@ -117,27 +117,3 @@
 % --- Solution environment: colored, unnumbered ---
 \theoremstyle{nonum}
 \mytheorem{td-sol}{Solution}{verdant}{}{}
-
-% ==============================================================================
-% GLOBAL THEOREM ENVIRONMENTS
-% ==============================================================================
-
-% --- Theorem style selection ---
-\theoremstyle{default}
-
-% --- Toggle for showing solutions ---
-\newtoggle{showsolutions}
-\newtoggle{showquestions}
-
-% --- Custom exercise counter, reset per section ---
-\newcounter{tdcounter}
-% \counterwithin{tdcounter}{section}
-\counterwithout{tdcounter}{section} 
-
-% --- Exercise environment: colored, numbered per section ---
-\mytheorem{td-exo}{Exercice}{astral}{tdcounter}{o}
-
-
-% --- Solution environment: colored, unnumbered ---
-\theoremstyle{nonum}
-\mytheorem{td-sol}{Solution}{verdant}{}{}
